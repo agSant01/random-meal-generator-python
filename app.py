@@ -5,7 +5,7 @@ from restaurants import chipotle
 app = Flask(__name__)
 
 
-@app.route('/api', methods=['GET'])
+@app.route('/get-meal', methods=['GET'])
 def test():
     menu = chipotle.make_an_order()
 
