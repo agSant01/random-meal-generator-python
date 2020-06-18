@@ -1,4 +1,5 @@
 import random
+from utils import many, one
 
 _style = ['Burrito', 'Bowl']
 
@@ -54,33 +55,14 @@ def _tortilla():
     return "Emm, don't get tortilla today"
 
 
-def _many(list_: list):
-    qty = random.randint(1, 4)
-
-    items = []
-    dummy_list = list_.copy()
-
-    # select qty amount of items without replacement
-    while qty > 0:
-        choice = random.choice(dummy_list)
-        dummy_list.remove(choice)
-        items.append(choice)
-        qty = qty - 1
-    return items
-
-
-def _one(list_: list):
-    return random.choice(list_)
-
-
 def make_an_order() -> dict:
     return {
-        'Style': _one(_style),
-        'Rice': _one(_rice),
-        'Beans': _one(_beans),
-        'Protein': _one(_protein),
+        'Style': one(_style),
+        'Rice': one(_rice),
+        'Beans': one(_beans),
+        'Protein': one(_protein),
         'Veggies': _veggies(),
-        'Toppings': _many(_topping),
+        'Toppings': many(_topping),
         'Chips': _chips(),
         'Side Tortilla': _tortilla()
     }
