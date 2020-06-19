@@ -33,7 +33,7 @@ def _get_recursive(text_, new_line, tab, dict_: dict):
     for m_item in dict_:
         val = dict_[m_item]
         if isinstance(val, dict):
-            text_ += tab + m_item.title() + ':' + new_line
+            text_ += tab + m_item.title().replace('_', ' ') + ':' + new_line
             text_ += _get_recursive("", new_line, f'{tab}{tab}', val)
         elif isinstance(val, list):
             val = f"{', '.join(val)}"
