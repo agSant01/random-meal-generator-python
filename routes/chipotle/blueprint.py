@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from routes.chipotle import dao
 
-bp = Blueprint('chipotle_routes', __name__,
+bp = Blueprint('chipotle', __name__,
                url_prefix='/chipotle')
 
 

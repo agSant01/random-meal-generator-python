@@ -2,9 +2,13 @@ from flask import Flask, jsonify, request
 import json
 
 from routes.chipotle import blueprint as chipotle_bp
+from routes.papajohns import blueprint as papajohns_bp
+
 app = Flask(__name__)
 
 app.register_blueprint(chipotle_bp.bp)
+app.register_blueprint(papajohns_bp.bp)
+app.config['JSON_SORT_KEYS'] = False
 
 
 @app.route('/', methods=['GET'])
