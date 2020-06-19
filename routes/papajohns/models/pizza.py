@@ -31,7 +31,7 @@ _meat_ingredients = [
     'Ham',
     'Italian Sausage',
     'Beef',  # 6
-    'Pork Sausage (Chorizo)'
+    'Pork Sausage (Chorizo)',
     'Anchovies'
 ]
 
