@@ -122,7 +122,7 @@ def _random_pizza(**kwargs):
         ingredients.add('Cheese')
 
     return {
-        'name': 'Chef Creation',
+        'name': 'Custom Made Creation, Order by Ingredient',
         'ingredients': list(ingredients),
         'base_sauce': one(_base_sauces)
     }

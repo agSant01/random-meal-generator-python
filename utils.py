@@ -37,9 +37,9 @@ def _get_recursive(text_, new_line, tab, dict_: dict):
             text_ += _get_recursive("", new_line, f'{tab}{tab}', val)
         elif isinstance(val, list):
             val = f"{', '.join(val)}"
-            text_ += f"{tab}\u2022 {m_item.title()}: {val.replace('_', ' ')}{new_line}"
+            text_ += f"{tab}\u2022 {m_item.title().replace('_', ' ')}: {val.replace('_', ' ')}{new_line}"
         else:
-            text_ += f"{tab}\u2022 {m_item.title()}: {val.replace('_', ' ')}{new_line}"
+            text_ += f"{tab}\u2022 {m_item.title().replace('_', ' ')}: {val.replace('_', ' ')}{new_line}"
 
     return text_
 

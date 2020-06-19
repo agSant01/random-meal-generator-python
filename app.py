@@ -13,7 +13,14 @@ app.config['JSON_SORT_KEYS'] = False
 
 @app.route('/', methods=['GET'])
 def welcome():
-    return f'Welcome to the Chipotle random order generator:<br>\n'\
-        'Routes:<br>\n'\
-        '\u2022 /restaurant_name/meal | For JSON Response<br>\n' \
-        '\u2022 /restaurant_name/meal/txt | For text Response\n'
+    agent: str = request.headers.get('User-Agent')
+
+    new_line = '<br>'
+    if agent.startswith('curl'):
+        new_line = '\n'
+
+    return f'Welcome to the Chipotle random order generator:{new_line}'\
+        f'Routes:{new_line}'\
+        f'\u2022 /chipotle/meal | For JSON Response{new_line}' \
+        f'\u2022 /chipotle/meal/txt | For TEXT Response{new_line}' \
+        f'\u2022 /papajuan | To see the diferent available random menu option{new_line}'
