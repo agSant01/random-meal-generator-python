@@ -145,7 +145,7 @@ def _get_pizzas(pizza_list, **kwargs):
 
 
 def _add_restaurant_label(dict_: dict):
-    new_dict = ({'restaurant': "Papa John's", 'order': dict_})
+    new_dict = ({'restaurant': "Papa Juan", 'order': dict_})
     return new_dict
 
 

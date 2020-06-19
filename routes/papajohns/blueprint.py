@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from routes.papajohns import dao
 from utils import format_response
 
-bp = Blueprint('papajohns', __name__,  url_prefix='/papajohns')
+bp = Blueprint('papajohns', __name__,  url_prefix='/papajohn')
 
 
 @bp.route('/meal')
