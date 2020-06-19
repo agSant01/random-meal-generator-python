@@ -23,7 +23,7 @@ def dict_to_text(dict_: dict, new_line: str) -> str:
         return 'An error happened'
 
     text = f"{tab}Feeling adventurous? This is what I found for {dict_.get('restaurant', '--Unavailable--')}{new_line}"\
-        f"{tab}Yeah, I can't use that name, but you know what I mean ;)"
+        f"{tab}Yeah, I can't use that name, but you know what I mean ;){new_line}"
     text += _get_recursive("", new_line, tab, order)
 
     return text
